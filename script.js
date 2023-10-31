@@ -12,12 +12,11 @@ let active = document.querySelector('.active')
 
 links.forEach(link => {
     link.addEventListener('click', () => {
-        active.classList.remove('active')
+        document.querySelector('.active').classList.remove('active')
         link.classList.add('active')
 
         var attr = link.getAttribute('language');
-        localStorage.setItem('selected_language', attr)
-
+        
         item1.textContent = data[attr].item1;
         item2.textContent = data[attr].item2;
         item3.textContent = data[attr].item3;
@@ -26,6 +25,11 @@ links.forEach(link => {
         span1.textContent = data[attr].span1;
         span2.textContent = data[attr].span2;
         span3.textContent = data[attr].span3;
+        // localStorage.setItem('selectedLanguage', JSON.stringify(data[attr]))
+        // console.log(localStorage.getItem('selectedLanguage'));
+        if(!localStorage.getItem('data')){
+            localStorage.setItem('lang', JSON.stringify(data[attr]))
+        }
     })
 })
 
