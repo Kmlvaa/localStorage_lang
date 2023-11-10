@@ -68,9 +68,24 @@
 }
 .header2 input {
   height: 40px;
-  width: 780px;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+}
+.input-section{
+  background-color: white;
+  width: 800px;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
   border-radius: 6px;
   padding-left: 20px;
+  border-radius: 10px;
+}
+.input-section div{
+  display: flex;
+  align-items: center;
+  border: none;
 }
 .header2 button {
   padding: 11px 20px;
